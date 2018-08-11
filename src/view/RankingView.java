@@ -40,7 +40,7 @@ public class RankingView extends javax.swing.JFrame {
                 rowData[6] = "+ " + r.getTimeAfter().toString().substring(2).toLowerCase();
             else
                 rowData[6] = "NOT FINISHED";
-            
+
             dtm.addRow(rowData);
         }
 

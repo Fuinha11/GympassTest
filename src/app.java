@@ -1,3 +1,4 @@
+import javafx.stage.FileChooser;
 import model.Lap;
 import model.Pilot;
 import model.Race;
@@ -6,26 +7,31 @@ import view.RankingView;
 
 import javax.swing.*;
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.sql.Time;
 import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Scanner;
-import java.util.regex.Pattern;
 
 public class app {
     public static void main(String args[]) {
         java.awt.EventQueue.invokeLater(() -> {
+
             JFrame frame = new JFrame("Race Ranking");
+            JFileChooser chooser = new JFileChooser();
+//            chooser.setTitle("Please select a file to open");
 
-
-            List<Pilot> list = Utils.extractPilots("C:\\Users\\Fuinha\\Desktop\\Gympass\\src\\files\\test.txt");
-            Race race = new Race(4, list);
-            frame.setContentPane(new RankingView(race).panel1);
-            frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-            frame.pack();
-            frame.setVisible(true);
+            int resp = chooser.showOpenDialog(null);
+            if (resp != 1) {
+                File selectedFile = chooser.getSelectedFile();
+                List<Pilot> list = Utils.extractPilots(selectedFile.getAbsolutePath());
+                Race race = new Race(4, list);
+                frame.setContentPane(new RankingView(race).panel1);
+                frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+                frame.pack();
+                frame.setVisible(true);
+            } else {
+                System.exit(0);
+            }
         });
     }
 
