@@ -1,19 +1,27 @@
 import model.Lap;
 import model.Pilot;
 import model.Race;
+import utils.Utils;
 import view.RankingView;
 
 import javax.swing.*;
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.sql.Time;
 import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
+import java.util.regex.Pattern;
 
 public class app {
     public static void main(String args[]) {
         java.awt.EventQueue.invokeLater(() -> {
             JFrame frame = new JFrame("Race Ranking");
-            Race race = mockRace();
+
+
+            List<Pilot> list = Utils.extractPilots("C:\\Users\\Fuinha\\Desktop\\Gympass\\src\\files\\test.txt");
+            Race race = new Race(4, list);
             frame.setContentPane(new RankingView(race).panel1);
             frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
             frame.pack();
@@ -33,6 +41,8 @@ public class app {
         p2.addLap(new Lap(1, Duration.ofMillis(38555), Time.valueOf("04:01:02"), 50F));
         p2.addLap(new Lap(2, Duration.ofMinutes(102000), new Time(winnerTime + (long) (Math.random() * 10000)), 100F));
         list.add(p2);
+
+        System.out.println(list.contains(p2));
 
         Pilot p3 = new Pilot("Jãolão3", 69);
         p3.addLap(new Lap(1, Duration.ofMinutes(2), Time.valueOf("04:01:02"), 50F));

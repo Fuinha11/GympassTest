@@ -65,4 +65,14 @@ public class Pilot {
 
         return sum/laps.size();
     }
+
+    @Override
+    public boolean equals(Object o) {
+        return o instanceof Pilot && ((Pilot) o).pilotCode == this.pilotCode;
+    }
+
+    @Override
+    public int hashCode() {
+        return pilotCode;
+    }
 }

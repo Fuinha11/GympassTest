@@ -6,7 +6,6 @@ import model.Ranking;
 
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
-import java.text.SimpleDateFormat;
 
 public class RankingView extends javax.swing.JFrame {
     private Race race;
@@ -27,7 +26,7 @@ public class RankingView extends javax.swing.JFrame {
         String[] collunms = {"Position", "Code", "Name", "Best Lap", "Average Speed", "Laps", "Time From First"};
         DefaultTableModel dtm = new DefaultTableModel(0, race.getRanking().size());
         dtm.setColumnIdentifiers(collunms);
-//        DurationFormatUtils
+
         for (Ranking r : race.getRanking()) {
             Object[] rowData = new Object[numberOfColumns];
             rowData[0] = r.getPosition();
@@ -38,12 +37,10 @@ public class RankingView extends javax.swing.JFrame {
             rowData[5] = r.getPilot().totalLaps();
 
             if (r.completedRace())
-                rowData[6] = "+ " + r.getTimeAfter().toString().toString().substring(2).toLowerCase();
+                rowData[6] = "+ " + r.getTimeAfter().toString().substring(2).toLowerCase();
             else
                 rowData[6] = "NOT FINISHED";
-
-
-
+            
             dtm.addRow(rowData);
         }
 
@@ -58,6 +55,6 @@ public class RankingView extends javax.swing.JFrame {
         Pilot winner = race.getWinner();
         winnerName.setText(winner.getPilotName());
         winnerCode.setText(winner.getPilotCode().toString());
-        winnerTime.setText(winner.bestLap().finishTime.toString());
+        winnerTime.setText(winner.bestLap().lapTime.toString().substring(2).toLowerCase());
     }
 }
