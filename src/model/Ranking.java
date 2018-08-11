@@ -16,12 +16,12 @@ public class Ranking {
             timeAfter = Duration.ZERO;
         else {
             try {       //avoiding null pointers
-                this.timeAfter = Duration.between(pilot.getLapTime(lastLap).toInstant(), raceEnd.toInstant());
+                this.timeAfter = Duration.ofMillis(pilot.getLapTime(lastLap).getTime() - raceEnd.getTime());
             } catch (Exception e) {
                 timeAfter = Duration.ZERO;
-                completedRace = false;
             }
         }
+        completedRace = pilot.totalLaps() >= lastLap;
     }
 
     public Pilot getPilot() {

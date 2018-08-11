@@ -1,19 +1,20 @@
 package model;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
 public class Pilot {
-    private int pilotCode;
+    private Integer pilotCode;
     private String pilotName;
-    private List<Lap> laps;
+    private List<Lap> laps = new ArrayList<>();
 
     public Pilot(String pilotName, int pilotCode) {
         this.pilotName = pilotName;
         this.pilotCode = pilotCode;
     }
 
-    public int getPilotCode() {
+    public Integer getPilotCode() {
         return pilotCode;
     }
 
@@ -40,7 +41,7 @@ public class Pilot {
                 currentBest = l;
         }
 
-        return bestLap();
+        return currentBest;
     }
 
     public Date getLapTime(int lap) {

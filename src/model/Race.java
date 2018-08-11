@@ -8,18 +8,29 @@ public class Race {
     private Integer lastLap = 4;
     private List<Pilot> pilots;
 
+    public Race(Integer lastLap, List<Pilot> pilots) {
+        this.lastLap = lastLap;
+        this.pilots = pilots;
+    }
+
     public Pilot getWinner() {
         if (pilots == null || pilots.size() == 0)
             return null;
 
-        Pilot winner = pilots.get(0);
+        pilots.sort((p1, p2) -> {
+            if (p1.getLapTime(lastLap) == null)
+                return 1;
 
-        for (Pilot p : pilots) {
-            if (p.getLapTime(lastLap).before(winner.getLapTime(lastLap)))
-                winner = p;                             //if p finishing time is before winner finishing time, replace winner
-        }
+            if (p2.getLapTime(lastLap) == null)
+                return -1;
 
-        return winner;
+            if (p1.getLapTime(lastLap).before(p2.getLapTime(lastLap)))
+                return -1;
+            else
+                return 1;
+        });
+
+        return pilots.get(0);
     }
 
     public List<Ranking> getRanking() {
