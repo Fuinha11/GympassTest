@@ -25,14 +25,15 @@ public class Utils {
                 if (!row.startsWith("Hora")) {
                     String[] split = row.split("/");
 
-                    if (pilots.contains(new Pilot(split[2], Integer.valueOf(split[1])))) {
-                        addLap(pilots.get(pilots.indexOf(new Pilot(split[2], Integer.valueOf(split[1])))), split);
-                    } else {
-                        pilots.add(createPilot(split));
-                    }
-                    System.out.println(row);
-                    for (String sp : split) {
-                        System.out.println(sp);
+                    try {
+
+                        if (pilots.contains(new Pilot(split[2], Integer.valueOf(split[1])))) {
+                            addLap(pilots.get(pilots.indexOf(new Pilot(split[2], Integer.valueOf(split[1])))), split);
+                        } else {
+                            pilots.add(createPilot(split));
+                        }
+                    } catch (Exception e){
+                        e.printStackTrace();
                     }
                 }
             }

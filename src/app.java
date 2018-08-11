@@ -1,4 +1,4 @@
-import javafx.stage.FileChooser;
+
 import model.Lap;
 import model.Pilot;
 import model.Race;
@@ -6,6 +6,7 @@ import utils.Utils;
 import view.RankingView;
 
 import javax.swing.*;
+import javax.swing.filechooser.FileFilter;
 import java.io.File;
 import java.sql.Time;
 import java.time.Duration;
@@ -18,17 +19,21 @@ public class app {
 
             JFrame frame = new JFrame("Race Ranking");
             JFileChooser chooser = new JFileChooser();
-//            chooser.setTitle("Please select a file to open");
+            chooser.setDialogTitle("Please select a .txt file to open");
 
             int resp = chooser.showOpenDialog(null);
-            if (resp != 1) {
+            if (resp == JFileChooser.APPROVE_OPTION) {
                 File selectedFile = chooser.getSelectedFile();
                 List<Pilot> list = Utils.extractPilots(selectedFile.getAbsolutePath());
-                Race race = new Race(4, list);
-                frame.setContentPane(new RankingView(race).panel1);
-                frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-                frame.pack();
-                frame.setVisible(true);
+                if (list.size() != 0) {
+                    Race race = new Race(4, list);
+                    frame.setContentPane(new RankingView(race).panel1);
+                    frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+                    frame.pack();
+                    frame.setVisible(true);
+                } else {
+                    JOptionPane.showMessageDialog(null, "It was impossible to parse File");
+                }
             } else {
                 System.exit(0);
             }
