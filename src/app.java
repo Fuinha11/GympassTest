@@ -1,5 +1,4 @@
 
-import model.Lap;
 import model.Pilot;
 import model.Race;
 import utils.Utils;
@@ -7,9 +6,6 @@ import view.RankingView;
 
 import javax.swing.*;
 import java.io.File;
-import java.sql.Time;
-import java.time.Duration;
-import java.util.ArrayList;
 import java.util.List;
 
 public class app {
