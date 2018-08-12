@@ -8,9 +8,6 @@
   <component name="ChangeListManager">
     <list default="true" id="960462f4-bab3-4d6d-92c2-098e802e9864" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Race.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Race.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/RankingView.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/RankingView.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/RankingView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/RankingView.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -64,21 +61,22 @@
     <session id="-597259560">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
+          <entry key="project.closed" value="1" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.opened" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="114" />
+          <entry key="java" value="196" />
           <entry key="md" value="17" />
-          <entry key="txt" value="23" />
+          <entry key="txt" value="47" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="114" />
-          <entry key="PLAIN_TEXT" value="40" />
+          <entry key="JAVA" value="196" />
+          <entry key="PLAIN_TEXT" value="64" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -98,8 +96,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/model/Pilot.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="23" selection-start-line="23" selection-end-line="23" />
+            <state relative-caret-position="412">
+              <caret line="76" column="21" lean-forward="true" selection-start-line="76" selection-start-column="21" selection-end-line="76" selection-end-column="21" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1551#1552#0" expanded="true" />
@@ -123,19 +121,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/view/RankingView.form">
           <provider selected="true" editor-type-id="ui-designer" />
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/model/Race.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="688">
-              <caret line="75" column="39" lean-forward="true" selection-start-line="75" selection-start-column="39" selection-end-line="75" selection-end-column="39" />
+            <state relative-caret-position="463">
+              <caret line="80" lean-forward="true" selection-start-line="80" selection-end-line="80" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#getRanking#0;class#Race#0" />
+                <element signature="e#1920#1921#0" expanded="true" />
                 <element signature="e#1946#1947#0" expanded="true" />
               </folding>
             </state>
@@ -233,15 +232,15 @@
         <option value="$PROJECT_DIR$/src/main.java" />
         <option value="$PROJECT_DIR$/src/model/Lap.java" />
         <option value="$PROJECT_DIR$/src/model/Ranking.java" />
-        <option value="$PROJECT_DIR$/src/model/Pilot.java" />
         <option value="$PROJECT_DIR$/src/files/test.txt" />
         <option value="$PROJECT_DIR$/src/utils/Utils.java" />
         <option value="$PROJECT_DIR$/src/app.java" />
         <option value="$PROJECT_DIR$/src/files/fromGithub.txt" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/src/view/RankingView.java" />
+        <option value="$PROJECT_DIR$/src/model/Pilot.java" />
         <option value="$PROJECT_DIR$/src/model/Race.java" />
         <option value="$PROJECT_DIR$/src/view/RankingView.form" />
-        <option value="$PROJECT_DIR$/src/view/RankingView.java" />
       </list>
     </option>
   </component>
@@ -272,19 +271,6 @@
             </path>
             <path>
               <item name="TestGympass" type="b2602c69:ProjectViewProjectNode" />
-              <item name="GympassTest" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="view" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TestGympass" type="b2602c69:ProjectViewProjectNode" />
-              <item name="GympassTest" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="view" type="462c0819:PsiDirectoryNode" />
-              <item name="RankingView" type="e9f4de52:FormNode" />
-            </path>
-            <path>
-              <item name="TestGympass" type="b2602c69:ProjectViewProjectNode" />
               <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
           </expand>
@@ -303,7 +289,7 @@
     <property name="GenerateAntBuildDialog.generateSingleFile" value="true" />
     <property name="GenerateAntBuildDialog.outputFileNameProperty" value="testgympass" />
     <property name="UI_DESIGNER_EDITOR_MODE.PaletteManager.WIDTH" value="155" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1534108262956" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1534108425679" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="last.edited.regexp" value="23:49:08.277       038 – F.MASSA     1&#10;&#10;&#10;   1:02.852 44.888888888" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -528,14 +514,20 @@
       <option name="project" value="LOCAL" />
       <updated>1534105179359</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Add fields to main view">
+      <created>1534108335798</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1534108335798</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="37" y="0" width="1888" height="1047" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18763676" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18763676" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -544,7 +536,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32946634" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32858709" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32858709" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.45125958" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -574,7 +566,8 @@
     <MESSAGE value="Use Regex to find values" />
     <MESSAGE value="Add Jar File" />
     <MESSAGE value="Add Readme" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add Readme" />
+    <MESSAGE value="Add fields to main view" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add fields to main view" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -671,20 +664,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/Pilot.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="23" selection-start-line="23" selection-end-line="23" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1551#1552#0" expanded="true" />
-            <element signature="e#1635#1636#0" expanded="true" />
-            <element signature="e#1678#1679#0" expanded="true" />
-            <element signature="e#1710#1711#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/model/Ranking.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
@@ -743,9 +722,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/view/RankingView.form">
-      <provider selected="true" editor-type-id="ui-designer" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/view/RankingView.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="208">
@@ -756,17 +732,35 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/Pilot.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="412">
+          <caret line="76" column="21" lean-forward="true" selection-start-line="76" selection-start-column="21" selection-end-line="76" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1551#1552#0" expanded="true" />
+            <element signature="e#1635#1636#0" expanded="true" />
+            <element signature="e#1678#1679#0" expanded="true" />
+            <element signature="e#1710#1711#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/model/Race.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="688">
-          <caret line="75" column="39" lean-forward="true" selection-start-line="75" selection-start-column="39" selection-end-line="75" selection-end-column="39" />
+        <state relative-caret-position="463">
+          <caret line="80" lean-forward="true" selection-start-line="80" selection-end-line="80" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#getRanking#0;class#Race#0" />
+            <element signature="e#1920#1921#0" expanded="true" />
             <element signature="e#1946#1947#0" expanded="true" />
           </folding>
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/view/RankingView.form">
+      <provider selected="true" editor-type-id="ui-designer" />
     </entry>
   </component>
   <component name="masterDetails">
