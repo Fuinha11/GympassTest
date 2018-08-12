@@ -1,5 +1,6 @@
 package model;
 
+import java.time.Duration;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -70,6 +71,10 @@ public class Race {
         }
 
         return currentBest;
+    }
+
+    public Duration getRaceDuration() {
+        return getWinner().getTotalTime();
     }
 
 }

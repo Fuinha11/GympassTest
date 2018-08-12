@@ -1,5 +1,6 @@
 package model;
 
+import java.time.Duration;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -64,6 +65,16 @@ public class Pilot {
         }
 
         return sum/laps.size();
+    }
+
+    public Duration getTotalTime() {
+        Duration total = Duration.ZERO;
+
+        for (Lap l : laps) {
+            total = total.plus(l.lapTime);
+        }
+
+        return total;
     }
 
     @Override

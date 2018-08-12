@@ -14,6 +14,10 @@ public class RankingView extends javax.swing.JFrame {
     private JTextField winnerTime;
     private JTable racersTable;
     private JTextField winnerCode;
+    private JTextField bestTimeTextField;
+    private JTextField bestNameTextField;
+    private JTextField raceDurationTextField;
+    private JTextField numberRacersTextField;
 
     public RankingView(Race race) {
         this.race = race;
@@ -56,5 +60,10 @@ public class RankingView extends javax.swing.JFrame {
         winnerName.setText(winner.getPilotName());
         winnerCode.setText(winner.getPilotCode().toString());
         winnerTime.setText(winner.bestLap().lapTime.toString().substring(2).toLowerCase());
+        numberRacersTextField.setText("" + race.getRanking().size());
+        Pilot bestPilot = race.getBestLapInRace();
+        bestNameTextField.setText(bestPilot.getPilotName());
+        bestTimeTextField.setText(bestPilot.bestLap().lapTime.toString().substring(2).toLowerCase());
+        raceDurationTextField.setText(race.getRaceDuration().toString().substring(2).toLowerCase());
     }
 }
