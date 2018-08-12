@@ -6,7 +6,6 @@ import utils.Utils;
 import view.RankingView;
 
 import javax.swing.*;
-import javax.swing.filechooser.FileFilter;
 import java.io.File;
 import java.sql.Time;
 import java.time.Duration;
@@ -20,6 +19,8 @@ public class app {
             JFrame frame = new JFrame("Race Ranking");
             JFileChooser chooser = new JFileChooser();
             chooser.setDialogTitle("Please select a .txt file to open");
+            File workingDirectory = new File(System.getProperty("user.dir")+"\\src\\files");
+            chooser.setCurrentDirectory(workingDirectory);
 
             int resp = chooser.showOpenDialog(null);
             if (resp == JFileChooser.APPROVE_OPTION) {
@@ -39,6 +40,7 @@ public class app {
             }
         });
     }
+
 
     private static Race mockRace() {
         List<Pilot> list = new ArrayList<>();

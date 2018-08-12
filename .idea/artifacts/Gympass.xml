@@ -1,0 +1,10 @@
+<component name="ArtifactManager">
+  <artifact type="javafx" name="Gympass">
+    <output-path>$PROJECT_DIR$/out/artifacts/Gympass</output-path>
+    <root id="root">
+      <element id="archive" name="Gympass.jar">
+        <element id="module-output" name="Gympass" />
+      </element>
+    </root>
+  </artifact>
+</component>
